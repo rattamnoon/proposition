@@ -1,23 +1,23 @@
-// const sum = (arr1, arr2) => {
-//   const result = (
-//     Number(arr1.toString().replace(",", "")) +
-//     Number(arr2.toString().replace(",", ""))
-//   )
-//     .toString()
-//     .split("");
-//   return arr1.length > 0 || arr2.length > 0
-//     ? result[0] === "-"
-//       ? result
-//           .filter((v) => v !== "-")
-//           .map((v, i) => (i === 0 ? Number("-" + v) : Number(v)))
-//       : result.map(Number)
-//     : [];
-// };
+const sum2 = (arr1, arr2) => {
+  const result = (
+    Number(arr1.toString().replace(",", "")) +
+    Number(arr2.toString().replace(",", ""))
+  )
+    .toString()
+    .split("");
+  return arr1.length > 0 || arr2.length > 0
+    ? result[0] === "-"
+      ? result
+          .filter((v) => v !== "-")
+          .map((v, i) => (i === 0 ? Number("-" + v) : Number(v)))
+      : result.map(Number)
+    : [];
+};
 
-// console.log(sum([6, 7], [6, 7])); // [1, 3, 4]
-// console.log(sum([6, 7], [])); // [6, 7]
-// console.log(sum([-6, 7], [1, 0])); // [-5, 7]
-// console.log(sum([], [])); // []
+console.log(sum2([6, 7], [6, 7])); // [1, 3, 4]
+console.log(sum2([6, 7], [])); // [6, 7]
+console.log(sum2([-6, 7], [1, 0])); // [-5, 7]
+console.log(sum2([], [])); // []
 
 const sum = (...arg) => {
   let sumInt = arg.reduce((total, arr) => {
